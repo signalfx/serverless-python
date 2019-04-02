@@ -18,7 +18,7 @@ setup(
     version=version,  # noqa
     author='SignalFx, Inc',
     author_email='info@signalfx.com',
-    description='SignalFx https://github.com/signalfx/google-cloud-funtion-python Python Wrapper',
+    description='SignalFx Python Google Cloud Function Wrapper',
     license='Apache Software License v2',
     long_description=long_description,
     long_description_content_type='text/x-rst',

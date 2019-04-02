@@ -1,1 +1,1 @@
-git+git://github.com/seonsfx/serverless-common-python@c003438ce897f4cf72dd048e45bd583516bea72e
+signalfx_serverless_common>=0.0.1

@@ -1,13 +1,15 @@
 SignalFx Python Google Cloud Function Wrapper
 ==============================
 
-SignalFx Python Google Cloud Function Wrapper.
+~~SignalFx Python Google Cloud Function Wrapper.~~
+This doc will be updated as the dependency structure finalizes.
+
 
 Usage
 -----
 
-The SignalFx Python Google Cloud Function Wrapper is a wrapper around a Google Cloud Function
-Python function handler, used to instrument execution of the function
+The SignalFx Python Google Cloud Function Wrapper is a wrapper around a Google
+Cloud Function Python function handler, used to instrument execution of the function
 and send metrics and traces to SignalFx.
 
 Installation
@@ -23,8 +25,9 @@ Configuring the ingest endpoint
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 By default, this function wrapper will send to the `us0` realm. If you are
-not in this realm you will need to set the `SIGNALFX_INGEST_ENDPOINT` environment
-variable to the correct realm ingest endpoint (https://ingest.{REALM}.signalfx.com).
+not in this realm you will need to set the `SIGNALFX_INGEST_ENDPOINT`
+environment variable to the correct realm ingest endpoint
+(https://ingest.{REALM}.signalfx.com).
 To determine what realm you are in, check your profile page in the SignalFx
 web application (click the avatar in the upper right and click My Profile).
 
@@ -32,7 +35,9 @@ web application (click the avatar in the upper right and click My Profile).
 Environment Variables
 ~~~~~~~~~~~~~~~~~~~~~
 
-**Note: the environment variables SIGNALFX_INGEST_ENDPOINT and SIGNALFX_AUTH_TOKEN are being deprecated and will not be supported in future releases.**
+**Note: the environment variables SIGNALFX_INGEST_ENDPOINT and
+SIGNALFX_AUTH_TOKEN are being deprecated and will not be supported in future
+releases.**
 
 ::
 
@@ -49,9 +54,10 @@ Environment Variables
 
     SIGNALFX_TRACING_URL=tracing endpoint [ default: https://ingest.signalfx.com/v1/trace ]
 
-SIGNALFX_ENDPOINT_URL can be used to configure a common endpoint for metrics and
-traces, as is the case when forwarding with the Smart Gateway. The path :code:`/v1/traces`
-will automatically be added to the endpoint for traces.
+SIGNALFX_ENDPOINT_URL can be used to configure a common endpoint for metrics
+and traces, as is the case when forwarding with the Smart Gateway.
+The path :code:`/v1/traces` will automatically be added to the endpoint for
+traces.
 
 If either SIGNALFX_TRACING_URL or SIGNALFX_METRICS_URL are set, they will take
 precendence over SIGNALFX_ENDPOINT_URL for their respective components.
@@ -126,8 +132,8 @@ The Google Cloud Function wrapper sends the following metrics to SignalFx:
 |                       |                       | Function handler      |
 +-----------------------+-----------------------+-----------------------+
 
-The Google Cloud Function wrapper adds the following dimensions to all data points
-send to SignalFx:
+The Google Cloud Function wrapper adds the following dimensions to all data
+points send to SignalFx:
 
 +----------------------------------+----------------------------------+
 | Tag                              | Description                      |
@@ -151,7 +157,8 @@ send to SignalFx:
 Traces and tags sent by the Tracing wrapper
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The tracing wrapper creates a span for the wrapper handler. This span has the following tags:
+The tracing wrapper creates a span for the wrapper handler. This span has the
+following tags:
 
 +----------------------------------+----------------------------------+
 | Tag                              | Description                      |
@@ -219,4 +226,4 @@ Packaging
 License
 ~~~~~~~
 
-Apache Software License v2. Copyright © 2014-2019 SignalFx
+Apache Software License v2. Copyright © 2019 SignalFx
