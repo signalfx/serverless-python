@@ -1,16 +1,15 @@
 SignalFx Python Google Cloud Function Wrapper
-==============================
+=============================================
 
-~~SignalFx Python Google Cloud Function Wrapper.~~
-This doc will be updated as the dependency structure finalizes.
+SignalFx Python Google Cloud Function Wrapper
 
 
 Usage
 -----
 
 The SignalFx Python Google Cloud Function Wrapper is a wrapper around a Google
-Cloud Function Python function handler, used to instrument execution of the function
-and send metrics and traces to SignalFx.
+Cloud Function Python function handler, used to instrument execution of the
+function and send metrics and traces to SignalFx.
 
 Installation
 ~~~~~~~~~~~~
@@ -92,7 +91,7 @@ For metrics, decorate your handler with @signalfx_gcf.emits_metrics
     import signalfx_gcf
 
     @signalfx_gcf.emits_metrics
-    def handler(event, context):
+    def handler(request):
         # your code
 
 For tracing, use the @signalfx_gcf.is_traced decorator
@@ -102,7 +101,7 @@ For tracing, use the @signalfx_gcf.is_traced decorator
     import signalfx_gcf
 
     @signalfx_gcf.is_traced
-    def handler(event, context):
+    def handler(request):
         # your code
 
 The decorators can be used individually or together.
@@ -180,7 +179,7 @@ following tags:
 +----------------------------------+----------------------------------+
 
 Sending custom metric from the Google Cloud Function
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
 
@@ -193,7 +192,7 @@ Sending custom metric from the Google Cloud Function
     signalfx_gcf.send_counter('database_calls', 1)
 
 Adding manual tracing to the Google Cloud Function
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Manual instrumentation can be added to trace critical parts of your handler
 function.
