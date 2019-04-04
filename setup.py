@@ -29,5 +29,5 @@ setup(
         'Operating System :: OS Independent',
         'Programming Language :: Python',
     ],
-    url='https://github.com/signalfx/google-cloud-funtion-python',
+    url='https://github.com/signalfx/google-cloud-function-python',
 )
