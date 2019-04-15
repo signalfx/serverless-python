@@ -3,11 +3,11 @@
 import functools
 import os
 import opentracing
-import pip
 import warnings
 from jaeger_client import Config
 
 from . import utils
+
 
 def wrapper(func):
     @functools.wraps(func)

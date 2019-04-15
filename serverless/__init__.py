@@ -1,14 +1,6 @@
 # Copyright (C) 2019 SignalFx, Inc. All rights reserved.
 
-import signalfx
-import os
-import datetime
-
-from ..version import name, version
-
-from . import utils
-from . import metrics
-from . import tracing
+from . import tracing, utils, metrics
 
 
 def configure(source, fields):
@@ -34,6 +26,7 @@ def send_metric(counters=[], gauges=[]):
 
 
 # convenience method
+# FIXME: can't do {} or [] as default params.
 def send_counter(metric_name, metric_value=1, dimensions={}):
     metrics.send_counter(metric_name, metric_value, dimensions)
 

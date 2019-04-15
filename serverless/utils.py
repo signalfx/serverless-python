@@ -3,8 +3,6 @@
 import os
 import warnings
 
-from ..version import name, version
-
 source = None
 fields = {}
 

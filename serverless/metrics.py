@@ -5,8 +5,6 @@ import signalfx
 import os
 import datetime
 
-from ..version import name, version
-
 from . import utils
 
 ingest_endpoint = utils.get_metrics_url()
