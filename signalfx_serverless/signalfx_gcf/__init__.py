@@ -1,13 +1,13 @@
 # Copyright (C) 2019 SignalFx, Inc. All rights reserved.
 
-import signalfx_serverless_common
+from .. import signalfx_serverless_common
+from ..version import name, version
 
 from . import utils
-from .version import name, version
 
-def __init():
-    fields = utils.get_fields()
-    signalfx_serverless_common.configure('gcf', fields)
+fields = utils.get_fields()
+signalfx_serverless_common.configure('gcf', fields)
+    
 
 # backwards compatibility
 def wrapper(*args, **kwargs):

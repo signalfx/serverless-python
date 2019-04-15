@@ -4,7 +4,7 @@
 
 from setuptools import setup, find_packages
 
-with open('signalfx_gcf/version.py') as f:
+with open('signalfx_serverless/version.py') as f:
     exec(f.read())
 
 with open('README.rst') as readme:
@@ -18,7 +18,7 @@ setup(
     version=version,  # noqa
     author='SignalFx, Inc',
     author_email='info@signalfx.com',
-    description='SignalFx Python Google Cloud Function Wrapper',
+    description='SignalFx Python Serverless Wrapper',
     license='Apache Software License v2',
     long_description=long_description,
     long_description_content_type='text/x-rst',
@@ -29,5 +29,5 @@ setup(
         'Operating System :: OS Independent',
         'Programming Language :: Python',
     ],
-    url='https://github.com/signalfx/google-cloud-function-python',
+    url='https://github.com/seonsfx/serverless-python',
 )

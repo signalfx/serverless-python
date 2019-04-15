@@ -3,7 +3,7 @@
 import os
 import warnings
 
-from .version import name, version
+from ..version import name, version
 
 dim_prefix = 'gcf'
 
