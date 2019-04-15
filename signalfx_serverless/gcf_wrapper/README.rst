@@ -18,7 +18,7 @@ To install from PyPi
 
 ::
 
-    $ pip install signalfx_gcf
+    $ pip install signalfx_serverless
 
 Configuring the ingest endpoint
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -84,23 +84,23 @@ Wrapping a function
 
 There are two wrappers provided.
 
-For metrics, decorate your handler with @signalfx_gcf.emits_metrics
+For metrics, decorate your handler with @gcf_wrapper.emits_metrics
 
 ::
 
-    import signalfx_gcf
+    from signalfx_serverless import gcf_wrapper
 
-    @signalfx_gcf.emits_metrics
+    @gcf_wrapper.emits_metrics
     def handler(request):
         # your code
 
-For tracing, use the @signalfx_gcf.is_traced decorator
+For tracing, use the @gcf_wrapper.is_traced decorator
 
 ::
 
-    import signalfx_gcf
+    from signalfx_serverless import gcf_wrapper
 
-    @signalfx_gcf.is_traced
+    @gcf_wrapper.is_traced
     def handler(request):
         # your code
 
@@ -183,13 +183,13 @@ Sending custom metric from the Google Cloud Function
 
 ::
 
-    import signalfx_gcf
+    from signalfx_serverless import gcf_wrapper
 
     # sending application_performance metric with value 100 and dimension abc:def
-    signalfx_gcf.send_gauge('application_performance', 100, {'abc':'def'})
+    gcf_wrapper.send_gauge('application_performance', 100, {'abc':'def'})
 
     # sending counter metric with no dimension
-    signalfx_gcf.send_counter('database_calls', 1)
+    gcf_wrapper.send_counter('database_calls', 1)
 
 Adding manual tracing to the Google Cloud Function
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -6,7 +6,7 @@ SignalFx Python Serverless Wrapper
 Supported Platforms
 ~~~~~~~~~~~~~~~~~~~
 
-- `Google Cloud Function <signalfx_serverless/signalfx_gcf/README.rst>`_
+- `Google Cloud Function <signalfx_serverless/gcf_wrapper/README.rst>`_
 
 
 
