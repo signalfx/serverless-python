@@ -38,7 +38,7 @@ if '--module' in sys.argv:
             'Operating System :: OS Independent',
             'Programming Language :: Python',
         ],
-        url='https://github.com/seonsfx/serverless-python',
+        url='https://github.com/signalfx/serverless-python',
     )
 else:
     print("Missing parameter : --module")
