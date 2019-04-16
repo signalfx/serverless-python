@@ -1,21 +1,26 @@
+
 #!/usr/bin/env python
 
 # Copyright (C) 2019 SignalFx, Inc. All rights reserved.
-from os import path
 
-from setuptools import setup
+import sys
+from setuptools import setup, find_packages
 
-with open('requirements.txt') as f:
-    requirements = [line.strip() for line in f.readlines()]
+if '--module' in sys.argv:
+    idx = sys.argv.index('--module')
+    sys.argv.pop(idx)
+    module = sys.argv.pop(idx)
 
-for pkg in ('signalfx_gcf', 'signalfx_lambda'):
     vars = {}
 
-    with open(path.join(pkg, 'version.py')) as f:
+    with open(module + '/version.py') as f:
         exec(f.read(), vars)
 
-    with open(path.join(pkg, 'README.rst')) as readme:
+    with open('README.rst') as readme:
         long_description = readme.read()
+
+    with open('requirements.txt') as f:
+        requirements = [line.strip() for line in f.readlines()]
 
     setup(
         name=vars['name'],  # noqa
@@ -35,3 +40,5 @@ for pkg in ('signalfx_gcf', 'signalfx_lambda'):
         ],
         url='https://github.com/seonsfx/serverless-python',
     )
+else:
+    print("Missing parameter : --module")
