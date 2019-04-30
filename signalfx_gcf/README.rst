@@ -18,7 +18,7 @@ To install from PyPi
 
 ::
 
-    $ pip install signalfx_gcf
+    $ pip install signalfx_serverless_gcf
 
 Configuring the ingest endpoint
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
