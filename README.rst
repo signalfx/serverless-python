@@ -9,7 +9,6 @@ Supported Platforms
 - `Google Cloud Function <signalfx_gcf/README.rst>`_
 
 
-
 Packaging
 ~~~~~~~~~
 
