@@ -48,7 +48,7 @@ releases.**
 
     # optional metrics and tracing configuration
 
-    SIGNALFX_METRICS_URL=ingest endpoint [ default: https://pops.signalfx.com ]
+    SIGNALFX_METRICS_URL=ingest endpoint [ default: https://ingest.{REALM}.signalfx.com ]
     SIGNALFX_SEND_TIMEOUT=timeout in seconds for sending datapoint [ default: 0.3 ]
 
     SIGNALFX_TRACING_URL=tracing endpoint [ default: https://ingest.signalfx.com/v1/trace ]
@@ -73,7 +73,7 @@ If SIGNALFX_ENDPOINT_URL and SIGNALFX_METRICS_URL are set:
 
 ::
 
-    SIGNALFX_METRICS_URL=https://pops.signalfx.com
+    SIGNALFX_METRICS_URL=https://ingest.{REALM}.signalfx.com
 
     SIGNALFX_ENDPOINT_URL=<gateway_address>
 
